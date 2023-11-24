@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl4qdyyqr6mfa"]
+
+[ext_resource type="Texture2D" uid="uid://bfp1jxw4taowk" path="res://assets/blackbox.png" id="1_kve7j"]
+[ext_resource type="FontFile" uid="uid://bhabrq3l0tt27" path="res://fonts/Retro Gaming.ttf" id="2_ybsl5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iflon"]
+font = ExtResource("2_ybsl5")
+font_size = 20
+
+[node name="Textbox" type="MarginContainer"]
+offset_right = 256.0
+offset_bottom = 64.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_kve7j")
+patch_margin_left = 50
+patch_margin_top = 41
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_iflon")
+clip_text = true
+uppercase = true
